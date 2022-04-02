@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+    <title>Word Corrector</title>
+  </head>
+  <body>
+   <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class=""></i>Word Corrector</h1>
+        <button id="leave-app" class="btn">Leave</button>
+      </header>
+      <div class="row">
+        <div class="column" style="background-color: #bbb; overflow: auto;">
+          <div class="chat-messages"></div>
+        </div>
+        <div class="column" style="background-color: #bbb;">
+          <main class="chat-main">
+            <div class="chat-sidebar">
+              <h3><i class="fas fa-queue"></i>Queue</h3>
+              <ul id="queue"></ul>
+            </div>
+          </main>
+        </div>
+        <div class="column" style="background-color: #aaa;">
+          <main class="chat-main">
+            <div class="chat-sidebar">
+              <h3><i class="fas fa-users"></i>Active Users</h3>
+              <ul id="users"></ul>
+            </div>
+          </main>
+        </div>
+        <div class="chat-form-container">
+          <form id="chat-form">
+            <input type="file"/>
+            <button class="btn">Send</button>
+          
+            
+           </form>
+
+           <input id="lexicon" type="text"/>
+           <button id="lexicon-button">Enter</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.4.0/socket.io.js" integrity="sha512-Y8KodDCDqst1e8z0EGKiqEQq3T8NszmgW2HvsC6+tlNw7kxYxHTLl5Iw/gqZj/6qhZdBt+jYyOsybgSAiB9OOA==" crossorigin="anonymous"></script>
+    <script src="room.js"></script> 
+  </body>
+</html>

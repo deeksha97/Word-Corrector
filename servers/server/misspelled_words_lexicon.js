@@ -1,0 +1,1 @@
+const misspelledWords = {"fx":"fx","jmp":"jmp","l":"l","m":"m","n":"n","o":"o","p":"p","q":"q","r":"r","deeksha":"deeksha","haa":"haa","vhvh":"vhvh","ll":"ll","jjj":"jjj","qwee":"qwee","saga":"saga","hello":"hello","whatsup":"whatsup","nikbakers":"nikbakers","lexnme":"lexnme"}; module.exports = {misspelledWords};
